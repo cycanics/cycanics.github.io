@@ -1,5 +1,5 @@
 ---
-title: "I edited a production LLM's weights almost-by-hand. It worked. A logistic regression did the same job better."
+title: "A production LLM's weights edited almost-by-hand. It worked. A logistic regression did the same job better."
 description: "Weight-space programming tested on a 26B production LLM judge: a direct weight edit vs a linear probe vs a better prompt, measured."
 date: 2026-11-14
 draft: false
