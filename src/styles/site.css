@@ -27,3 +27,4 @@ footer { margin-top:4rem; padding-top:1rem; padding-bottom:2rem; border-top:1px 
   .hero .text { width:100%; }
   .about-fig { width:135px; }
 }
+.tagline { color:var(--muted); font-size:.92em; margin-bottom:1.5rem; }
