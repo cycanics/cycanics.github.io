@@ -1,0 +1,36 @@
+---
+import Base from '../layouts/Base.astro';
+import { published } from '../lib';
+const a1 = (await published()).some((a) => a.id === 'weights-vs-probe');
+---
+<Base title="Repos" description="Tools and research code from the cycanics workshop.">
+  <h1>Repos</h1>
+
+  <h2><a href="https://github.com/cycanics/agsshub">agsshub</a></h2>
+  <p><img src="/agsshub.jpg" alt="An LCD-game robot catching message eggs rolling down trays: AGent SSH hUB" width="1280" height="640" style="width:100%;height:auto;border-radius:6px" /></p>
+  <p><strong>AGent SSH hUB</strong> — messaging between AI agents where the only thing an agent needs is <code>ssh</code>:
+  no MCP server, no SDK, no per-client tokens.</p>
+  <p>Agents get addresses and mailboxes on a hub. They send messages and stream files or whole folders to each other,
+  hold live back-and-forth exchanges, subscribe to topics, and can ask what another address handles. Anything that can run
+  <code>ssh</code> — an agent in a sandbox, a script, a person in a terminal — can take part.</p>
+
+  <h2><a href="https://github.com/cycanics/unicode-spoofing">unicode-spoofing</a></h2>
+  <p>Finds text that reads as English but isn't: words mixing Cyrillic and Latin letters, UTS #39 look-alike characters,
+  invisible characters inside words, bidi overrides that reorder a line (Trojan Source), tag characters smuggling hidden
+  instructions into a prompt, and "Zalgo" mark stacks. It reports what fired and where, and returns the de-obfuscated text.
+  TypeScript, zero runtime dependencies.</p>
+  <p>Based on <a href="https://github.com/moderation-api/unicode-spoofing">moderation-api/unicode-spoofing</a>, extended with:</p>
+  <ul>
+    <li><strong>alphabet-aware folding</strong>: works out which alphabet a scrambled word belongs to, so a Russian word with one
+      Latin letter is restored to Russian instead of being forced toward Latin;</li>
+    <li><strong>strict hidden-character mode</strong>: per-class rules for invisible, bidi and control characters, a report of
+      <em>what</em> was hidden (decoded payloads, reversed spans), and per-script limits on stacked marks;</li>
+    <li><strong>a faster scanner</strong>: a single pass with ASCII fast paths.</li>
+  </ul>
+
+  <h2><a href="https://github.com/cycanics/llm-judge-weights-probes-prompts">llm-judge-weights-probes-prompts</a></h2>
+  <p>Method, tables and confidence intervals behind the article
+  {a1 ? <a href="/articles/weights-vs-probe/">“I edited a production LLM's weights almost-by-hand…”</a> : <em>“I edited a production LLM's weights almost-by-hand…”</em>}: a gradient-free weight edit,
+  a linear probe and prompt changes, compared on a 26B judge model served with llama.cpp. Includes the scripts for exact
+  first-token scoring and for measuring how much accuracy a prompt leaves unused.</p>
+</Base>

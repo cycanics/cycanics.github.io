@@ -133,6 +133,6 @@ Two more traps cost less, because they were caught before the final scoring runs
 
 All of this is one model and one task. On the test set the edit was scored under the production prompt only.
 
-Method, tables and confidence intervals: [link to write-up]
+Method, tables and confidence intervals: [cycanics/llm-judge-weights-probes-prompts](https://github.com/cycanics/llm-judge-weights-probes-prompts)
 
 Next: the same regression turned out to be useful in a second way. It shows how much accuracy a prompt leaves unused, and when to stop optimising it.
