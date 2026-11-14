@@ -135,4 +135,4 @@ All of this is one model and one task. On the test set the edit was scored under
 
 Method, tables and confidence intervals: [llm-judge-weights-probes-prompts](/repos/#llm-judge-weights-probes-prompts)
 
-Next: the same regression turned out to be useful in a second way. It shows how much accuracy a prompt leaves unused, and when to stop optimising it.
+Next: the same regression turned out to be useful in a second way. It shows how much accuracy a prompt leaves unused, and when to stop optimising it: [Prompt optimization for an LLM judge](/articles/prompt-optimization-gap/).
