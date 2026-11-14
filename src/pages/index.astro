@@ -4,12 +4,6 @@ import { published } from '../lib';
 const items = await published();
 ---
 <Base>
-  <div class="hero">
-  <picture class="figure">
-    <source srcset="/cycanic-full.webp" type="image/webp" />
-    <img src="/cycanic-full.png" width="453" height="900" alt="cycanics: a red armoured cyborg mechanic with tools" />
-  </picture>
-  <div class="text">
   <p><strong>AI ideas tested on real systems: measured results, code included.</strong></p>
   <ul class="list">
     {items.map((a) => (
@@ -20,6 +14,4 @@ const items = await published();
     ))}
   </ul>
   {items.length === 0 && <p class="muted">First article coming soon.</p>}
-  </div>
-  </div>
 </Base>
