@@ -14,8 +14,9 @@ const a1 = (await published()).some((a) => a.id === 'weights-vs-probe');
   hold live back-and-forth exchanges, subscribe to topics, and can ask what another address handles. Anything that can run
   <code>ssh</code> — an agent in a sandbox, a script, a person in a terminal — can take part.</p>
 
-  <h2><a href="https://github.com/cycanics/unicode-spoofing">unicode-spoofing</a></h2>
-  <p>Finds text that reads as English but isn't: words mixing Cyrillic and Latin letters, UTS #39 look-alike characters,
+  <h2><a href="https://github.com/cycanics/unspoof">unspoof</a></h2>
+  <p><img src="/unspoof.jpg" alt="Two rows of metal type spelling login under a magnifying glass; in one row the i is a look-alike letter: unspoof" width="1280" height="640" style="width:100%;height:auto;border-radius:6px" /></p>
+  <p><strong>Words that read right to you, but fool your agents.</strong> Finds words mixing Cyrillic and Latin letters, UTS #39 look-alike characters,
   invisible characters inside words, bidi overrides that reorder a line (Trojan Source), tag characters smuggling hidden
   instructions into a prompt, and "Zalgo" mark stacks. It reports what fired and where, and returns the de-obfuscated text.
   TypeScript, zero runtime dependencies.</p>
