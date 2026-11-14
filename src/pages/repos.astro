@@ -6,7 +6,7 @@ const a1 = (await published()).some((a) => a.id === 'weights-vs-probe');
 <Base title="Repos" description="Tools and research code from the cycanics workshop.">
   <h1>Repos</h1>
 
-  <h2><a href="https://github.com/cycanics/agsshub">agsshub</a></h2>
+  <h2 id="agsshub"><a href="https://github.com/cycanics/agsshub">agsshub</a></h2>
   <p><img src="/agsshub.jpg" alt="An LCD-game robot catching message eggs rolling down trays: AGent SSH hUB" width="1280" height="640" style="width:100%;height:auto;border-radius:6px" /></p>
   <p><strong>AGent SSH hUB</strong> — messaging between AI agents where the only thing an agent needs is <code>ssh</code>:
   no MCP server, no SDK, no per-client tokens.</p>
@@ -14,7 +14,14 @@ const a1 = (await published()).some((a) => a.id === 'weights-vs-probe');
   hold live back-and-forth exchanges, subscribe to topics, and can ask what another address handles. Anything that can run
   <code>ssh</code> — an agent in a sandbox, a script, a person in a terminal — can take part.</p>
 
-  <h2><a href="https://github.com/cycanics/unspoof">unspoof</a></h2>
+  <h2 id="session-sentinel"><a href="https://github.com/cycanics/session-sentinel">session-sentinel</a></h2>
+  <p><strong>Claude Code sessions that died, and how to resume them.</strong> A reboot, an OOM kill or a closed terminal ends a
+  Claude Code session without a trace. This plugin records every session start and clean exit, lists the sessions that never
+  ended cleanly, and gives you the command to resume each one. It stays fast however many transcripts you keep.</p>
+  <pre><code>/plugin marketplace add cycanics/session-sentinel
+/plugin install session-sentinel@session-sentinel</code></pre>
+
+  <h2 id="unspoof"><a href="https://github.com/cycanics/unspoof">unspoof</a></h2>
   <p><img src="/unspoof.jpg" alt="Two rows of metal type spelling login under a magnifying glass; in one row the i is a look-alike letter: unspoof" width="1280" height="640" style="width:100%;height:auto;border-radius:6px" /></p>
   <p><strong>Words that read right to you, but fool your agents.</strong> Finds words that mix alphabets or hide look-alike and invisible characters, bidi overrides and other tricks for
   smuggling hidden instructions into your agent. It reports what fired and where, and returns the de-obfuscated text.
@@ -29,7 +36,7 @@ const a1 = (await published()).some((a) => a.id === 'weights-vs-probe');
     <li><strong>fast</strong>: about 1 MB of Markdown in 80–130 ms on Node 20, in a single scan with ASCII fast paths.</li>
   </ul>
 
-  <h2><a href="https://github.com/cycanics/llm-judge-weights-probes-prompts">llm-judge-weights-probes-prompts</a></h2>
+  <h2 id="llm-judge-weights-probes-prompts"><a href="https://github.com/cycanics/llm-judge-weights-probes-prompts">llm-judge-weights-probes-prompts</a></h2>
   <p>Method, tables and confidence intervals behind the article
   {a1 ? <a href="/articles/weights-vs-probe/">“I edited a production LLM's weights almost-by-hand…”</a> : <em>“I edited a production LLM's weights almost-by-hand…”</em>}: a gradient-free weight edit,
   a linear probe and prompt changes, compared on a 26B judge model served with llama.cpp. Includes the scripts for exact

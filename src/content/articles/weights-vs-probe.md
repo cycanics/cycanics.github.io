@@ -3,7 +3,7 @@ title: "I edited a production LLM's weights almost-by-hand. It worked. A logisti
 description: "Weight-space programming tested on a 26B production LLM judge: a direct weight edit vs a linear probe vs a better prompt, measured."
 date: 2026-11-14
 draft: false
-repo: https://github.com/cycanics/llm-judge-weights-probes-prompts
+repo: /repos/#llm-judge-weights-probes-prompts
 ---
 
 In early November four people at MIT CSAIL published a blog post with a claim that was hard to leave alone. A large language model, they said, can open a smaller network, read its weights and rewrite them directly. No training run. No gradients. They called it weight-space programming, and the showpiece was striking: GPT-6 Astra changed 0.016 % of the weights of a small Qwen model, and its score on a maths benchmark went from 7.9 % to 48.1 %.
@@ -133,6 +133,6 @@ Two more traps cost less, because they were caught before the final scoring runs
 
 All of this is one model and one task. On the test set the edit was scored under the production prompt only.
 
-Method, tables and confidence intervals: [cycanics/llm-judge-weights-probes-prompts](https://github.com/cycanics/llm-judge-weights-probes-prompts)
+Method, tables and confidence intervals: [llm-judge-weights-probes-prompts](/repos/#llm-judge-weights-probes-prompts)
 
 Next: the same regression turned out to be useful in a second way. It shows how much accuracy a prompt leaves unused, and when to stop optimising it.
