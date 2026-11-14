@@ -15,9 +15,10 @@ const a1 = (await published()).some((a) => a.id === 'weights-vs-probe');
   <code>ssh</code> — an agent in a sandbox, a script, a person in a terminal — can take part.</p>
 
   <h2 id="session-sentinel"><a href="https://github.com/cycanics/session-sentinel">session-sentinel</a></h2>
-  <p><strong>Claude Code sessions that died, and how to resume them.</strong> A reboot, an OOM kill or a closed terminal ends a
-  Claude Code session without a trace. This plugin records every session start and clean exit, lists the sessions that never
-  ended cleanly, and gives you the command to resume each one. It stays fast however many transcripts you keep.</p>
+  <p><strong>Running many Claude Code sessions? Know which ones died, and bring them back.</strong>
+  A reboot or an OOM kill takes down a dozen sessions at once, and Claude Code leaves no record of which ones were mid-task.
+  session-sentinel records every session start and clean exit, lists the ones that never finished, and gives you the resume
+  command for each, or reopens them all as terminal tabs in one go. It stays fast with thousands of transcripts.</p>
   <pre><code>/plugin marketplace add cycanics/session-sentinel
 /plugin install session-sentinel@session-sentinel</code></pre>
 
