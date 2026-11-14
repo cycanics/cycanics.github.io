@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import { published } from '../lib';
+import { published, label } from '../lib';
 const items = await published();
 ---
 <Base>
@@ -8,7 +8,7 @@ const items = await published();
   <ul class="list">
     {items.map((a) => (
       <li>
-        <a href={`/articles/${a.id}/`}><strong>{a.data.title}</strong></a>{a.data.draft && ' (draft)'}<br />
+        <a href={`/articles/${a.id}/`}><strong>{label(a)}</strong></a>{a.data.draft && ' (draft)'}<br />
         <span class="muted">{a.data.date.toISOString().slice(0, 10)} — {a.data.description}</span>
       </li>
     ))}

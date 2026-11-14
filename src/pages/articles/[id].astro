@@ -9,6 +9,7 @@ const { a } = Astro.props;
 const { Content } = await render(a);
 ---
 <Base title={a.data.title} description={a.data.description}>
+  {a.data.part && a.data.parts && <p class="muted">Part {a.data.part} of {a.data.parts}</p>}
   <h1>{a.data.title}</h1>
   <p class="muted">{a.data.date.toISOString().slice(0, 10)}{a.data.repo && <> · <a href={a.data.repo}>code and data</a></>}</p>
   <Content />

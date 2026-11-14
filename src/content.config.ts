@@ -8,6 +8,8 @@ const articles = defineCollection({
     date: z.coerce.date(),
     draft: z.boolean().default(true),
     repo: z.string().optional(),
+    part: z.number().optional(),
+    parts: z.number().optional(),
   }),
 });
 export const collections = { articles };

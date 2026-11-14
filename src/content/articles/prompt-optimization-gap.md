@@ -3,6 +3,8 @@ title: "Prompt optimization for an LLM judge: how to see how much accuracy your 
 description: "A linear probe on the model's last hidden state shows how much accuracy an LLM judge's prompt leaves unused, and when prompt optimisation can stop."
 date: 2026-11-14
 draft: false
+part: 2
+parts: 2
 repo: /repos/#llm-judge-weights-probes-prompts
 ---
 

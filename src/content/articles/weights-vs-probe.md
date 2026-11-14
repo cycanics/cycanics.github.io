@@ -3,6 +3,8 @@ title: "A production LLM's weights edited almost-by-hand. It worked. A logistic 
 description: "Weight-space programming tested on a 26B production LLM judge: a direct weight edit vs a linear probe vs a better prompt, measured."
 date: 2026-11-14
 draft: false
+part: 1
+parts: 2
 repo: /repos/#llm-judge-weights-probes-prompts
 ---
 
