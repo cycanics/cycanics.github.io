@@ -10,7 +10,9 @@ const full = title ? `${title} · cycanics` : 'cycanics';
   <title>{full}</title>
   <meta name="description" content={description} />
   <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
-  <link rel="icon" href="/favicon.png" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="alternate" type="application/rss+xml" title="cycanics" href="/rss.xml" />
   <meta property="og:title" content={full} /><meta property="og:description" content={description} />
   <meta property="og:image" content={new URL('/og.png', Astro.site)} />
@@ -19,7 +21,6 @@ const full = title ? `${title} · cycanics` : 'cycanics';
 </head>
 <body>
   <header>
-    <img src="/avatar-88.png" alt="" />
     <a class="brand" href="/">cycanics</a>
     <nav><a href="/">Articles</a><a href="/repos/">Repos</a><a href="/about/">About</a><a href="https://github.com/cycanics">GitHub</a><a href="/rss.xml">RSS</a></nav>
   </header>
