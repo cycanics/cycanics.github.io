@@ -16,9 +16,8 @@ const a1 = (await published()).some((a) => a.id === 'weights-vs-probe');
 
   <h2><a href="https://github.com/cycanics/unspoof">unspoof</a></h2>
   <p><img src="/unspoof.jpg" alt="Two rows of metal type spelling login under a magnifying glass; in one row the i is a look-alike letter: unspoof" width="1280" height="640" style="width:100%;height:auto;border-radius:6px" /></p>
-  <p><strong>Words that read right to you, but fool your agents.</strong> Finds words mixing Cyrillic and Latin letters, UTS #39 look-alike characters,
-  invisible characters inside words, bidi overrides that reorder a line (Trojan Source), tag characters smuggling hidden
-  instructions into a prompt, and "Zalgo" mark stacks. It reports what fired and where, and returns the de-obfuscated text.
+  <p><strong>Words that read right to you, but fool your agents.</strong> Finds words that mix alphabets or hide look-alike and invisible characters, bidi overrides and other tricks for
+  smuggling hidden instructions into your agent. It reports what fired and where, and returns the de-obfuscated text.
   TypeScript, zero runtime dependencies.</p>
   <p>Based on <a href="https://github.com/moderation-api/unicode-spoofing">moderation-api/unicode-spoofing</a>, extended with:</p>
   <ul>
@@ -27,7 +26,7 @@ const a1 = (await published()).some((a) => a.id === 'weights-vs-probe');
       Serbian, Macedonian, Kazakh, Tajik, Uzbek and extended European Latin can be switched on;</li>
     <li><strong>strict hidden-character mode</strong>: per-class rules for invisible, bidi and control characters, a report of
       <em>what</em> was hidden (decoded payloads, reversed spans), and per-script limits on stacked marks;</li>
-    <li><strong>3–9× faster</strong> (3.2–8.7× measured): a single scan pass with ASCII fast paths.</li>
+    <li><strong>fast</strong>: about 1 MB of Markdown in 80–130 ms on Node 20, in a single scan with ASCII fast paths.</li>
   </ul>
 
   <h2><a href="https://github.com/cycanics/llm-judge-weights-probes-prompts">llm-judge-weights-probes-prompts</a></h2>
