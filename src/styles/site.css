@@ -19,11 +19,11 @@ footer { margin-top:4rem; padding-top:1rem; padding-bottom:2rem; border-top:1px 
 .hero .figure { flex:0 0 auto; }
 .hero .figure img { display:block; height:auto; width:220px; max-width:none; }
 .hero .text { flex:1 1 auto; min-width:0; }
-.about-fig { float:left; width:120px; height:auto; margin:.3rem 1.25rem .5rem 0; }
+.about-fig { float:left; width:180px; height:auto; margin:.3rem 1.25rem .5rem 0; }
 @media (max-width: 640px) {
   header { flex-wrap:wrap; row-gap:.4rem; } header nav { margin-left:0; gap:.85rem; flex-wrap:wrap; }
   .hero { flex-direction:column; align-items:center; gap:1rem; }
   .hero .figure img { width:auto; max-height:260px; }
   .hero .text { width:100%; }
-  .about-fig { width:90px; }
+  .about-fig { width:135px; }
 }
