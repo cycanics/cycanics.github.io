@@ -1,20 +1,20 @@
-:root { --ink:#1b2430; --bg:#fbfcf8; --lcd:#c8d5b9; --muted:#5b6672; --link:#2f5d3a; }
-@media (prefers-color-scheme: dark) { :root { --ink:#e4ead9; --bg:#151b22; --lcd:#2b3a2c; --muted:#9aa5ae; --link:#a9d18e; } }
+:root { --ink:#17212b; --bg:#f3f6f8; --rule:#d3dde4; --muted:#5d6b78; --link:#2c6e84; }
+@media (prefers-color-scheme: dark) { :root { --ink:#e3e9ee; --bg:#121a21; --rule:#2a3a46; --muted:#93a1ad; --link:#7fb6c9; } }
 * { box-sizing: border-box; }
 body { margin:0; background:var(--bg); color:var(--ink); font:18px/1.65 Charter, 'Iowan Old Style', Georgia, serif; }
 header, main, footer { max-width: 44rem; margin: 0 auto; padding: 0 1.25rem; }
-header { display:flex; align-items:center; gap:.75rem; padding-top:1.5rem; padding-bottom:1rem; border-bottom:4px solid var(--lcd); }
+header { display:flex; align-items:center; gap:.75rem; padding-top:1.5rem; padding-bottom:1rem; border-bottom:4px solid var(--rule); }
 header a.brand { font:700 1.25rem/1 ui-monospace, 'DejaVu Sans Mono', Menlo, monospace; color:var(--ink); text-decoration:none; }
 header nav { margin-left:auto; display:flex; gap:1rem; font:0.95rem ui-sans-serif, system-ui, sans-serif; }
 a { color:var(--link); }
 h1, h2, h3 { font-family: ui-sans-serif, system-ui, sans-serif; line-height:1.25; }
 code, pre { font-family: ui-monospace, 'DejaVu Sans Mono', Menlo, monospace; font-size:.85em; }
-pre { background:var(--lcd); color:var(--ink); padding:1rem; overflow-x:auto; border-radius:6px; }
+pre { background:var(--rule); color:var(--ink); padding:1rem; overflow-x:auto; border-radius:6px; }
 table { border-collapse:collapse; font-size:.9em; display:block; overflow-x:auto; }
-th, td { border-bottom:1px solid var(--lcd); padding:.35rem .6rem; text-align:left; }
+th, td { border-bottom:1px solid var(--rule); padding:.35rem .6rem; text-align:left; }
 .muted { color:var(--muted); font-size:.9em; }
 ul.list { list-style:none; padding:0; } ul.list li { margin:1.25rem 0; }
-footer { margin-top:4rem; padding-top:1rem; padding-bottom:2rem; border-top:1px solid var(--lcd); font-size:.85rem; color:var(--muted); }
+footer { margin-top:4rem; padding-top:1rem; padding-bottom:2rem; border-top:1px solid var(--rule); font-size:.85rem; color:var(--muted); }
 .hero { display:flex; gap:2rem; align-items:flex-start; margin-top:1.5rem; }
 .hero .figure { flex:0 0 auto; }
 .hero .figure img { display:block; height:auto; width:220px; max-width:none; }
