@@ -4,7 +4,7 @@
 body { margin:0; background:var(--bg); color:var(--ink); font:18px/1.65 Charter, 'Iowan Old Style', Georgia, serif; }
 header, main, footer { max-width: 44rem; margin: 0 auto; padding: 0 1.25rem; }
 header { display:flex; align-items:center; gap:.75rem; padding-top:1.5rem; padding-bottom:1rem; border-bottom:4px solid var(--lcd); }
-header img { width:40px; height:40px; image-rendering:auto; border-radius:6px; }
+header img { width:40px; height:40px; image-rendering:auto; border-radius:50%; }
 header a.brand { font:700 1.25rem/1 ui-monospace, 'DejaVu Sans Mono', Menlo, monospace; color:var(--ink); text-decoration:none; }
 header nav { margin-left:auto; display:flex; gap:1rem; font:0.95rem ui-sans-serif, system-ui, sans-serif; }
 a { color:var(--link); }
