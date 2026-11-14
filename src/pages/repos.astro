@@ -23,8 +23,8 @@ const a1 = (await published()).some((a) => a.id === 'weights-vs-probe');
   <p>Based on <a href="https://github.com/moderation-api/unicode-spoofing">moderation-api/unicode-spoofing</a>, extended with:</p>
   <ul>
     <li><strong>alphabet-aware folding</strong>: works out which alphabet a scrambled word belongs to and restores it there, instead of forcing
-      everything toward Latin. Covers Latin (English and other European languages), Greek and Cyrillic (Russian,
-      Ukrainian, Belarusian, Bulgarian, Serbian, Macedonian, Kazakh, Tajik, Uzbek and more);</li>
+      everything toward Latin. Targets English, Russian, Ukrainian and Greek by default; Belarusian, Bulgarian,
+      Serbian, Macedonian, Kazakh, Tajik, Uzbek and extended European Latin can be switched on;</li>
     <li><strong>strict hidden-character mode</strong>: per-class rules for invisible, bidi and control characters, a report of
       <em>what</em> was hidden (decoded payloads, reversed spans), and per-script limits on stacked marks;</li>
     <li><strong>3–9× faster</strong> (3.2–8.7× measured): a single scan pass with ASCII fast paths.</li>
