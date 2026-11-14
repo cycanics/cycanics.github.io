@@ -1,0 +1,29 @@
+---
+import '../styles/site.css';
+const { title, description = 'AI ideas tested on real systems: measured results, code included.' } = Astro.props;
+const full = title ? `${title} · cycanics` : 'cycanics';
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{full}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+  <link rel="icon" href="/favicon.png" />
+  <link rel="alternate" type="application/rss+xml" title="cycanics" href="/rss.xml" />
+  <meta property="og:title" content={full} /><meta property="og:description" content={description} />
+  <meta property="og:image" content={new URL('/og.png', Astro.site)} />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script data-goatcounter="https://cycanics.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+  <header>
+    <img src="/avatar-88.png" alt="" />
+    <a class="brand" href="/">cycanics</a>
+    <nav><a href="/">Articles</a><a href="/about/">About</a><a href="https://github.com/cycanics">GitHub</a><a href="/rss.xml">RSS</a></nav>
+  </header>
+  <main><slot /></main>
+  <footer>cycanics — cybernetic mechanic's workshop. Code under each repo's license; text CC BY 4.0.</footer>
+</body>
+</html>

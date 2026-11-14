@@ -1,0 +1,17 @@
+---
+import Base from '../layouts/Base.astro';
+import { published } from '../lib';
+const items = await published();
+---
+<Base>
+  <p><strong>AI ideas tested on real systems: measured results, code included.</strong></p>
+  <ul class="list">
+    {items.map((a) => (
+      <li>
+        <a href={`/articles/${a.id}/`}><strong>{a.data.title}</strong></a>{a.data.draft && ' (draft)'}<br />
+        <span class="muted">{a.data.date.toISOString().slice(0, 10)} — {a.data.description}</span>
+      </li>
+    ))}
+  </ul>
+  {items.length === 0 && <p class="muted">First article coming soon.</p>}
+</Base>

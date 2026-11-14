@@ -1,0 +1,15 @@
+---
+import Base from '../../layouts/Base.astro';
+import { published } from '../../lib';
+import { render } from 'astro:content';
+export async function getStaticPaths() {
+  return (await published()).map((a) => ({ params: { id: a.id }, props: { a } }));
+}
+const { a } = Astro.props;
+const { Content } = await render(a);
+---
+<Base title={a.data.title} description={a.data.description}>
+  <h1>{a.data.title}</h1>
+  <p class="muted">{a.data.date.toISOString().slice(0, 10)}{a.data.repo && <> · <a href={a.data.repo}>code and data</a></>}</p>
+  <Content />
+</Base>
