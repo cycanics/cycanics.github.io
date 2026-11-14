@@ -1,7 +1,8 @@
 ---
 import '../styles/site.css';
 const { title, description = 'AI ideas tested on real systems: measured results, code included.' } = Astro.props;
-const full = title ? `${title} · cycanics` : 'cycanics';
+const site = "cycanic's workshop";
+const full = title ? `${title} · ${site}` : site;
 ---
 <!doctype html>
 <html lang="en">
@@ -13,7 +14,7 @@ const full = title ? `${title} · cycanics` : 'cycanics';
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-  <link rel="alternate" type="application/rss+xml" title="cycanics" href="/rss.xml" />
+  <link rel="alternate" type="application/rss+xml" title={site} href="/rss.xml" />
   <meta property="og:title" content={full} /><meta property="og:description" content={description} />
   <meta property="og:image" content={new URL('/og.png', Astro.site)} />
   <meta name="twitter:card" content="summary_large_image" />
@@ -21,10 +22,10 @@ const full = title ? `${title} · cycanics` : 'cycanics';
 </head>
 <body>
   <header>
-    <a class="brand" href="/">cycanics</a>
+    <a class="brand" href="/">cycanic's workshop</a>
     <nav><a href="/">Articles</a><a href="/repos/">Repos</a><a href="/about/">About</a><a href="https://github.com/cycanics">GitHub</a><a href="/rss.xml">RSS</a></nav>
   </header>
   <main><slot /></main>
-  <footer>cycanics — cybernetic mechanic's workshop. Code under each repo's license; text CC BY 4.0.</footer>
+  <footer>cybernetic mechanic's workshop · Code under each repo's license; text CC BY 4.0.</footer>
 </body>
 </html>
