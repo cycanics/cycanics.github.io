@@ -9,6 +9,8 @@ const articles = defineCollection({
     draft: z.boolean().default(true),
     repo: z.string().optional(),
     part: z.number().optional(),
+    image: z.string().optional(),
+    imageAlt: z.string().optional(),
     parts: z.number().optional(),
   }),
 });

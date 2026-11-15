@@ -5,6 +5,7 @@ date: 2026-11-14
 draft: false
 part: 1
 parts: 2
+image: /articles/weights-vs-probe.jpg
 repo: /repos/#llm-judge-weights-probes-prompts
 ---
 
@@ -83,6 +84,8 @@ Side by side:
 - Weight edit: about +5 points at equal false alarms.
 - Regression on the last state: 91 % caught at 68 false alarms.
 - Better prompt: 85 % caught at 13 false alarms.
+
+![Weight-space and prompt programming to improve AI safety: attacks caught, before 61 %; weights tuning +5 (66 %); prompt tuning +24 (85 %, with 5× fewer false alarms); deep-state classifier +30 (91 %)](/articles/weights-vs-probe.jpg)
 
 So which wins, the regression or the prompt? As pure ranking, neither. Both score 0.97 on AUC, where 1.0 is perfect and 0.5 is a coin flip; the production judge sits at 0.82. And stacking them barely helps. With the better prompt in place the regression adds 3 points at equal false alarms, which on this test set cannot be told from zero, and the weight edit adds nothing measurable on the tuning set. The better the prompt, the less is left lying in that last state for anyone else to pick up.
 

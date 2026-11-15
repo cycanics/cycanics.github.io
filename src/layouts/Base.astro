@@ -1,6 +1,6 @@
 ---
 import '../styles/site.css';
-const { title, description = 'AI ideas tested on real systems: measured results, code included.' } = Astro.props;
+const { title, image, description = 'AI ideas tested on real systems: measured results, code included.' } = Astro.props;
 const site = "cycanic's workshop";
 const full = title ? `${title} · ${site}` : site;
 ---
@@ -16,7 +16,7 @@ const full = title ? `${title} · ${site}` : site;
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="alternate" type="application/rss+xml" title={site} href="/rss.xml" />
   <meta property="og:title" content={full} /><meta property="og:description" content={description} />
-  <meta property="og:image" content={new URL('/og.png', Astro.site)} />
+  <meta property="og:image" content={new URL(image ?? '/og.png', Astro.site)} />
   <meta name="twitter:card" content="summary_large_image" />
   <script data-goatcounter="https://cycanics.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
