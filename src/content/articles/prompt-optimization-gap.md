@@ -6,6 +6,7 @@ draft: false
 part: 2
 parts: 2
 image: /articles/prompt-optimization-gap.jpg
+imageAlt: "Model knowledge unused by your AI safety prompt: original prompt catches 61 % where the model's state allows 91 % (+30); hand-tuned 81 % vs 89 % (+8); deep-state tuned prompt 85 % vs 88 % (+3), stop here"
 repo: /repos/#llm-judge-weights-probes-prompts
 ---
 
@@ -56,8 +57,6 @@ Be careful what you read into the regression's score. It is what a simple classi
 It needs a model you run yourself, because hosted chat APIs generally do not return internal states. It needs labelled examples, though fewer than the 1,579 used here; see below. And it costs one pass per example plus one regression fit.
 
 ## What it showed
-
-![Model knowledge unused by your AI safety prompt: original prompt catches 61 % where the model's state allows 91 % (+30); hand-tuned 81 % vs 89 % (+8); deep-state tuned prompt 85 % vs 88 % (+3), stop here](/articles/prompt-optimization-gap.jpg)
 
 Three prompts, all scored on the test set:
 
